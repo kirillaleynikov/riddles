@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, StatisticActivity::class.java)
             intent.putExtra("trueCount", trueCounter.toString())
             intent.putExtra("falseCount", falseCounter.toString())
+            intent.putExtra("allCount", allCounter.toString())
             startActivity(intent)
         }
 
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                         binding.tvAnswer.setBackgroundColor(Color.RED)
                         ++falseCounter
                     }
-                    if (allCounter == 2)
+                    if (allCounter == 10)
                     {
                         binding.btnStatistic.isVisible = true
                         binding.btnGetRiddle.isVisible = false

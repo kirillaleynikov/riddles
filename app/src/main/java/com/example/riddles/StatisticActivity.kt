@@ -11,8 +11,10 @@ class StatisticActivity : AppCompatActivity() {
         setContentView(binding.root)
         val trueCounter = intent.getStringExtra("trueCount")
         val falseCounter = intent.getStringExtra("falseCount")
+        val allCounter = intent.getStringExtra("allCount")
         binding.tvTrueCount.text = trueCounter.toString()
         binding.tvFalseCount.text = falseCounter.toString()
+        binding.textView5.text = allCounter.toString()
 
         binding.btnGoBack.setOnClickListener{
             finish()
